@@ -7,14 +7,8 @@ module Portal
     layout 'sub_portal'
 
     def all
-      if @project.id == 3
-        @projects = ::SubscribeCustomParticipation.all.order(:id)
-      end
-
-      if @project.id == 1
-        participation = ::Participation.find_by(name: "Prancha A1 (PDF até 15mb)") rescue nil
-        @projects = ::SubscribeParticipation.where(participation_id: participation.id)
-      end
+      participation = ::Participation.find_by(name: "Prancha A1 (PDF até 15mb)") rescue nil
+      @projects = ::SubscribeParticipation.where(participation_id: participation.id)
     end
 
     def winners

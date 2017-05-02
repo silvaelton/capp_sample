@@ -4,6 +4,17 @@
 - Rails 4.2.1
 
 
+## Conhecimentos utilizados
+
+- RubyOnRails 4
+- Pattern MVC
+- PostgreSQL
+- Heroku
+- Amazon S3
+- Emissão de boleto bancário
+- Rails UJS (nested_form)
+
+
 ## Primeiros passos
 
 1. Execute `bundle install`
@@ -50,8 +61,19 @@ Você poderá trocar essas informações em `config/db/seed.rb`
 
 5. A `gem carrierwave` está configurada para envio de arquivos para o Amazon S3. Necessário configurar
 
+6. A pasta `views/layouts` contém o layout base da aplicação.
+
+7. Diversas validações de data foram removidas, pois a diferença entre regras de negócio tornava impossível a manutenção.
+
+8. Tudo que tiver relação com o `portal` estará em `engines/portal`, como facilitador, observe o arquivo `engines/portal/config/routes.rb` para você entender o fluxo da aplicação.
 
 
+## Observações
 
+1. A Aplicação está rodando por algum tempo e já realizou dois concursos com regras de negócio completamente diferentes, com isso esta aplicação é muito mutável e adaptavél em alguns contextos. Poderá ser necessário que você realize modificações para que ela se adapte a sua regra de negócio.
 
+2. Esta aplicação esta sendo migrada para MySQL com isso existe alguns recursos que serão desativados.
 
+3. Esta aplicação esta sendo migrada para o ambiente da HostGator, com isso existe alguns recursos que serão desativados.
+
+4. A aplicação é muito simples, mas possui regras de negócio que tornam ela complexa de ser aplicada normalmente. Mas com um pouco de conhecimento em RubyonRails será facilmente corrigida para sua regra de negócio.

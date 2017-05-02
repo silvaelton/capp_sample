@@ -35,20 +35,13 @@
                   %a.item{href:"#{project_pages_path(@project)}"} Páginas
                   %a.item{href:"#{project_navs_path(@project)}"} Menus
                   %a.item{href:"#{project_popups_path(@project)}"} Pop-ups
-                - if current_user.administrador?
                   %a.item{href:"#{project_informs_path(@project)}"} Informes
                 %a.item{href:"#{project_subscribes_path(@project)}"} Inscrições
                 - if current_user.administrador?
                   %a.item{href:"#{project_bills_path(@project)}"} Boletos
-                - if @project.id == 1
                   %a.item{href:"#{project_participations_path(@project)}"} Participações
-                - if @project.id == 3
-                  %a.item{href:"#{project_subscribe_custom_participations_path(@project)}"} Participações
-                - if @project.id == 1
                   %a.item{href:"#{show_candidates_project_participations_path(@project)}"} Relatório de participações
-                - if @project.id == 3
                   %a.item{href:"#{project_winners_path(@project)}"} Vencedores
-                - if @project.id == 1
                   %a.item{href:"#{project_documents_path(@project)}"} Documentação
    
             .thirteen.wide.column
