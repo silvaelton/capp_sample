@@ -1,3 +1,5 @@
+>> Leia primeiro o último item "observações"
+
 ## Requsitos
 
 - PostgreSQL
